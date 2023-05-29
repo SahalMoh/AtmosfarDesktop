@@ -1,7 +1,7 @@
 const { app, BrowserWindow } = require('electron');
 const path = require('path');
 require('update-electron-app')({
-  repo: 'SahalMoh/AtmosfarDesktop_Releases',
+  repo: 'SahalMoh/AtmosfarDesktop',
   updateInterval: '1 hour',
   logger: require('electron-log')
 })
