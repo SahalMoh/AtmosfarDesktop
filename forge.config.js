@@ -37,7 +37,6 @@ module.exports = {
           name: 'AtmosfarDesktop',
         },
         authToken: process.env.GITHUB_TOKEN,
-        draft: true,
       }
     }
   ]
