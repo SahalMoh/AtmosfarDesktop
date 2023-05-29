@@ -38,7 +38,6 @@ module.exports = {
         },
         authToken: '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',
         draft: true,
-        prerelease: true
       }
     }
   ]
