@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    
+    <title>Atmosfär - The Weather at your Fingertips</title>
+    <meta name="author" content="Sahal">
+    <meta name="description" content="Atmosfär - The Weather at your Fingertips">
+    <meta name="keywords" content="Atmosfär, Atmosfär Weather App">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Atmosfär">
+    <meta name="twitter:description" content="Atmosfär - The Weather at your Fingertips">
+    <meta name="twitter:site" content="@">
+    <meta name="twitter:creator" content="@">
+    <meta name="twitter:image" content="https://atmosfar.netlify.app/images/weatherappbanner.png">
+    
+    <!-- Open Graph general (Facebook, Pinterest)-->
+    <meta property="og:title" content="Atmosfär">
+    <meta property="og:description" content="Atmosfär - The Weather at your Fingertips">
+    <meta property="og:url" content="https://atmosfar.netlify.app">
+    <meta property="og:site_name" content="atmosfar.netlify.app">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://atmosfar.netlify.app/images/weatherappbanner.png">
+    
+    <!-- Emoji SVG favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌻</text></svg>">
+    
+    <!-- https://realfavicongenerator.net -->
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="./assets/css/index.css" media="screen">
+    <script src="https://kit.fontawesome.com/fe9589e77e.js" crossorigin="anonymous" defer></script>
+</head>
+<body>
+    <div>
+        <div class="weather-app">
+            <div class="container">
+                <h3 class="brand">
+                    atmosfar.
+                </h3>
+                <div>
+                    <h1 class="temp">
+                        ??&#176; C/F
+                    </h1>
+                    <div class="city-time">
+                        <h1 class="name">
+                            ??
+                        </h1>
+                        <small>
+                            <span class="country">
+                                ???
+                            </span>
+                            -
+                            <span class="datetime">
+                                ??:??
+                            </span>
+                        </small>
+                    </div>
+                    <div class="weather">
+                        <img src="./assets/images/ICOQuestionMark.webp" class="icon" alt="icon" width="64"
+                        height="64"/>
+                        <span class="condition">
+                            ???
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="panel">
+                    <input type="text" class="search" placeholder="Search Location..."/>
+                    <button class="submit" aria-label="Search">
+                        <i class="fas fa-search"></i>
+                    </button>
+                <ul class="details">
+                    <h4>Weather Details</h4>
+                    <li>
+                        <span>Cloudy</span>
+                        <span class="cloud">??%</span>
+                    </li>
+                    <li>
+                        <span>Humidity</span>
+                        <span class="humidity">??%</span>
+                    </li>
+                    <li>
+                        <span>Wind</span>
+                        <span class="wind">??KMph / Mph</span>
+                    </li>
+                    <li>
+                        <span>Wind Direction In Degrees</span>
+                        <span class="winddeg">??&#176;</span>
+                    </li>
+                    <li>
+                        <span>Wind Direction</span>
+                        <span class="winddir">???</span>
+                    </li>
+                    <li>
+                        <span>Feels Like</span>
+                        <span class="feelslike">??&#176;C/F</span>
+                    </li>
+                    <li>
+                        <span>Visibility</span>
+                        <span class="visib">??KM / Miles</span>
+                    </li>
+                    <li>
+                        <span>UV Index</span>
+                        <span class="uvindex">???</span>
+                    </li>
+                    <li>
+                        <span>Pressure</span>
+                        <span class="pressure">???MB / IN</span>
+                    </li>
+                    <h4>Air Quality Details</h4>
+                    <li>
+                        <span>CO (Carbon Monoxide)</span>
+                        <span class="carbmonx">?? μg/m3</span>
+                    </li>
+                    <li>
+                        <span>O3 (Ozone)</span>
+                        <span class="ozone">?? μg/m3</span>
+                    </li>
+                    <li>
+                        <span>NO2 (Nitrogen Dioxide)</span>
+                        <span class="nitrodiox">?? μg/m3</span>
+                    </li>
+                    <li>
+                        <span>SO2 (Sulphur Dioxide)</span>
+                        <span class="sulphdiox">?? μg/m3</span>
+                    </li>
+                    <li>
+                        <span>PM2.5 (Particulate Matter Less Than 2.5 Microns)</span>
+                        <span class="pm25">?? μg/m3</span>
+                    </li>
+                    <li>
+                        <span>PM10 (Particulate Matter Less Than 10 Microns)</span>
+                        <span class="pm10">?? μg/m3</span>
+                    </li>
+                    <li>
+                        <span>Air Quality Index (As Per US <a href="https://gist.github.com/SahalMoh/b2056d823e63e1d7f51abf7232b4bf5b#air-quality-index-as-per-us-epa-standard" target="_blank">EPA Standards</a>)</span>
+                        <span class="usepaindex">???</span>
+                    </li>
+                    <li>
+                        <span>Air Quality Index (As Per UK <a href="https://gist.github.com/SahalMoh/b2056d823e63e1d7f51abf7232b4bf5b#air-quality-index-as-per-us-epa-standard" target="_blank">Defra Index</a>)</span>
+                        <span class="ukdefraindex">???</span>
+                    </li>
+                    <h4>Astronomy</h4>
+                    <li>
+                        <span>Sunrise</span>
+                        <span class="sunrise">00:00</span>
+                    </li>
+                    <li>
+                        <span>Sunset</span>
+                        <span class="sunset">00:00</span>
+                    </li>
+                    <li>
+                        <span>Moonrise</span>
+                        <span class="moonrise">00:00</span>
+                    </li>
+                    <li>
+                        <span>Moonset</span>
+                        <span class="moonset">00:00</span>
+                    </li>
+                    <li>
+                        <span>Moon Phase</span>
+                        <span class="moonphase">00</span>
+                    </li>
+                    <li>
+                        <span>Moon Illumination</span>
+                        <span class="moonillum">00</span>
+                    </li>
+                </ul>
+                Powered by <a href="https://www.weatherapi.com/" target="_blank" title="Weather API">WeatherAPI.com</a>
+            </div>
+        </div>
+    </div>
+    <script src="./assets/js/index.js" defer></script>
+</body>
+</html>
