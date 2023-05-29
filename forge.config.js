@@ -8,13 +8,12 @@ module.exports = {
       name: '@electron-forge/maker-squirrel',
       config: {
         name: 'Atmosfar',
-        certificateFile: './cert.pfx',
-        certificatePassword: 'atmosfar_Sahal@16022006',
+        iconUrl: 'https://atmosfar.netlify.app/assets/images/icon.ico',
+        setupIcon: 'src/assets/images/icon.ico',
       },
     },
     {
       name: '@electron-forge/maker-zip',
-      platforms: ['darwin'],
     },
     {
       name: '@electron-forge/maker-deb',
@@ -33,7 +32,7 @@ module.exports = {
           owner: 'SahalMoh',
           name: 'AtmosfarDesktop',
         },
-        authToken: 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,
+        authToken: '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',
         draft: true,
         prerelease: true
       }
