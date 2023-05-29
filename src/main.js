@@ -1,6 +1,10 @@
 const { app, BrowserWindow } = require('electron');
 const path = require('path');
-
+require('update-electron-app')({
+  repo: 'SahalMoh/AtmosfarDesktop_Releases',
+  updateInterval: '1 hour',
+  logger: require('electron-log')
+})
 // Handle creating/removing shortcuts on Windows when installing/uninstalling.
 if (require('electron-squirrel-startup')) {
   app.quit();

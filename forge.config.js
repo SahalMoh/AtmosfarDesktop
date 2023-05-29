@@ -10,6 +10,10 @@ module.exports = {
         name: 'Atmosfar',
         iconUrl: 'https://atmosfar.netlify.app/assets/images/icon.ico',
         setupIcon: 'src/assets/images/icon.ico',
+        config: {
+          certificateFile: './cert.pfx',
+          certificatePassword: 'SahalMoh@AtmosfarDesktop2022',
+        },
       },
     },
     {
