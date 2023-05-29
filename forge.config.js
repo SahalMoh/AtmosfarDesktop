@@ -12,7 +12,7 @@ module.exports = {
         setupIcon: 'src/assets/images/icon.ico',
         config: {
           certificateFile: './cert.pfx',
-          certificatePassword: 'SahalMoh@AtmosfarDesktop2022',
+          certificatePassword: process.env.CERT_PASSWORD,
         },
       },
     },
