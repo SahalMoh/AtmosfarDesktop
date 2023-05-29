@@ -36,7 +36,7 @@ module.exports = {
           owner: 'SahalMoh',
           name: 'AtmosfarDesktop',
         },
-        authToken: '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',
+        authToken: process.env.GITHUB_TOKEN,
         draft: true,
       }
     }
