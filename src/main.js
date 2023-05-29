@@ -1,5 +1,6 @@
-const { app, BrowserWindow } = require('electron');
+const { app, BrowserWindow, ipcMain } = require('electron');
 const path = require('path');
+const fs = require('fs');
 require('update-electron-app')({
   repo: 'SahalMoh/AtmosfarDesktop',
   logger: require('electron-log'),
@@ -39,8 +40,24 @@ const createWindow = () => {
   // and load the index.html of the app.
   mainWindow.loadFile(path.join(__dirname, 'index.html'));
 
+  const packagePath = path.join(app.getAppPath(), './package.json');
+  const packageData = JSON.parse(fs.readFileSync(packagePath));
+  const appVersion = packageData.version;
+
+  mainWindow.webContents.on('did-finish-load', () => {
+    mainWindow.webContents.send('app-version', appVersion);
+  });
   // Open the DevTools.
   //mainWindow.webContents.openDevTools();
+  ipcMain.on('get-app-version', (event) => {
+    const packagePath = path.join(app.getAppPath(), 'package.json');
+    const packageData = JSON.parse(fs.readFileSync(packagePath));
+    const appVersion = packageData.version;
+  
+    // Send the version number to the renderer process
+    event.sender.send('app-version', appVersion);
+  });
+  
 };
 
 // This method will be called when Electron has finished

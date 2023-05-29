@@ -144,10 +144,21 @@
                         <span class="moonillum">00</span>
                     </li>
                 </ul>
-                Powered by <a href="https://www.weatherapi.com/" target="_blank" title="Weather API">WeatherAPI.com</a>
+                <p>Powered by <a href="https://www.weatherapi.com/" target="_blank" title="Weather API">WeatherAPI.com</a></p>
+                <span id="app-version"></span>
             </div>
         </div>
     </div>
     <script src="./assets/js/index.js" defer></script>
+    <script type="text/javascript" defer>
+        const { ipcRenderer } = require('electron');
+        // Receive the version number from the main process
+        ipcRenderer.on('app-version', (event, appVersion) => {
+            const appVersionElement = document.getElementById('app-version');
+            appVersionElement.innerText = 'v' + appVersion;
+        });
+        // Request the version number from the main process
+        ipcRenderer.send('get-app-version');
+    </script>
 </body>
 </html>
