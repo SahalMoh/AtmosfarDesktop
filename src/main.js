@@ -1,6 +1,7 @@
 const { app, BrowserWindow, ipcMain, shell } = require('electron');
 const path = require('path');
 const fs = require('fs');
+require('electron-reload')(__dirname);
 require('update-electron-app')({
   repo: 'SahalMoh/AtmosfarDesktop',
   logger: require('electron-log'),
