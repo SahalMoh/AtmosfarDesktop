@@ -155,7 +155,7 @@
         // Receive the version number from the main process
         ipcRenderer.on('app-version', (event, appVersion) => {
             const appVersionElement = document.getElementById('app-version');
-            appVersionElement.innerText = 'v' + appVersion;
+            appVersionElement.innerText = 'App Version:' + appVersion;
         });
         // Request the version number from the main process
         ipcRenderer.send('get-app-version');
