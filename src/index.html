@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!--
     <title>Atmosfär - The Weather at your Fingertips</title>
     <meta name="author" content="Sahal">
     <meta name="description" content="Atmosfär - The Weather at your Fingertips">
     <meta name="keywords" content="Atmosfär, Atmosfär Weather App">
+    -->
     <link rel="stylesheet" href="./assets/css/index.css" media="screen">
     <script src="https://kit.fontawesome.com/fe9589e77e.js" crossorigin="anonymous" defer></script>
 </head>
@@ -111,11 +113,11 @@
                         <span class="pm10">?? μg/m3</span>
                     </li>
                     <li>
-                        <span>Air Quality Index (As Per US <a class="links" href="https://gist.github.com/SahalMoh/b2056d823e63e1d7f51abf7232b4bf5b#air-quality-index-as-per-us-epa-standard" target="_blank">EPA Standards</a>)</span>
+                        <span>Air Quality Index (As Per US <a class="links" href="https://gist.github.com/SahalMoh/b2056d823e63e1d7f51abf7232b4bf5b#air-quality-index-as-per-us-epa-standard">EPA Standards</a>)</span>
                         <span class="usepaindex">???</span>
                     </li>
                     <li>
-                        <span>Air Quality Index (As Per UK <a class="links" href="https://gist.github.com/SahalMoh/b2056d823e63e1d7f51abf7232b4bf5b#air-quality-index-as-per-us-epa-standard" target="_blank">Defra Index</a>)</span>
+                        <span>Air Quality Index (As Per UK <a class="links" href="https://gist.github.com/SahalMoh/b2056d823e63e1d7f51abf7232b4bf5b#air-quality-index-as-per-us-epa-standard">Defra Index</a>)</span>
                         <span class="ukdefraindex">???</span>
                     </li>
                     <h4>Astronomy</h4>
@@ -144,18 +146,19 @@
                         <span class="moonillum">00</span>
                     </li>
                 </ul>
-                <p>Powered by <a class="links" href="https://www.weatherapi.com/" target="_blank" title="Weather API">WeatherAPI.com</a></p>
+                <p>Powered by <a class="links" href="https://www.weatherapi.com/" title="Weather API">WeatherAPI.com</a></p>
                 <span id="app-version"></span>
             </div>
         </div>
     </div>
     <script src="./assets/js/index.js" defer></script>
+    <script src="./renderer.js" defer></script>
     <script type="text/javascript" defer>
         const { ipcRenderer } = require('electron');
         // Receive the version number from the main process
         ipcRenderer.on('app-version', (event, appVersion) => {
             const appVersionElement = document.getElementById('app-version');
-            appVersionElement.innerText = 'App Version:' + appVersion;
+            appVersionElement.innerText = 'v' + appVersion;
         });
         // Request the version number from the main process
         ipcRenderer.send('get-app-version');
