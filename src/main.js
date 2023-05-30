@@ -27,13 +27,12 @@ const createWindow = () => {
     vibrancy: "ultra-dark",
     visualEffectState: "active",
     closable: true,
-    devtools: false,
     webPreferences: {
       preload: path.join(__dirname, 'preload.js'),
       nodeIntegration:true,
       contextIsolation:false,
       enableRemoteModule:true,
-      devtools: false,
+      devtools: !app.isPackaged,
     },
   });
 
@@ -80,9 +79,6 @@ app.on('activate', () => {
   if (BrowserWindow.getAllWindows().length === 0) {
     createWindow();
   }
-  globalShortcut.register('CommandOrControl+Shift+I', () => {
-    return false;
-  })
 });
 
 // In this file you can include the rest of your app's specific main process
