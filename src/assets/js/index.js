@@ -1,3 +1,345 @@
-function _0x1174(_0x176fb8,_0x4faf63){const _0x6311dc=_0x6311();return _0x1174=function(_0x11748e,_0x4d6a32){_0x11748e=_0x11748e-0x135;let _0x3d1a46=_0x6311dc[_0x11748e];return _0x3d1a46;},_0x1174(_0x176fb8,_0x4faf63);}const _0x29375d=_0x1174;(function(_0x642fee,_0x2d892f){const _0x589c4a=_0x1174,_0x179680=_0x642fee();while(!![]){try{const _0x4415ba=parseInt(_0x589c4a(0x1d0))/0x1*(-parseInt(_0x589c4a(0x1a3))/0x2)+parseInt(_0x589c4a(0x1a4))/0x3+parseInt(_0x589c4a(0x1cd))/0x4+parseInt(_0x589c4a(0x163))/0x5*(parseInt(_0x589c4a(0x1c4))/0x6)+parseInt(_0x589c4a(0x184))/0x7*(parseInt(_0x589c4a(0x1d9))/0x8)+parseInt(_0x589c4a(0x196))/0x9*(-parseInt(_0x589c4a(0x1e7))/0xa)+parseInt(_0x589c4a(0x1cb))/0xb*(-parseInt(_0x589c4a(0x19c))/0xc);if(_0x4415ba===_0x2d892f)break;else _0x179680['push'](_0x179680['shift']());}catch(_0x288682){_0x179680['push'](_0x179680['shift']());}}}(_0x6311,0x20afd));let weather={'apiKey':'20a1f64cdfbf4af3b6f121849222508','fetchWeather':function(_0x457b26){const _0x1c31a4=_0x1174;fetch(_0x1c31a4(0x198)+this[_0x1c31a4(0x1c0)]+'&q='+_0x457b26+'&aqi=yes')[_0x1c31a4(0x145)](_0x2a5130=>{const _0x2f43f3=_0x1c31a4;if(!_0x2a5130['ok']){alert(_0x2f43f3(0x1be));throw new Error(_0x2f43f3(0x1be));}return _0x2a5130[_0x2f43f3(0x150)]();})['then'](_0x4165e5=>{const _0x4fdc9b=_0x1c31a4;this['displayWeather'](_0x4165e5),fetch(_0x4fdc9b(0x1d4)+this[_0x4fdc9b(0x1c0)]+'&q='+_0x457b26)['then'](_0xc6c76c=>{const _0x49a101=_0x4fdc9b;if(!_0xc6c76c['ok'])throw new Error(_0x49a101(0x161));return _0xc6c76c[_0x49a101(0x150)]();})['then'](_0x3700d4=>{const _0x5a770a=_0x4fdc9b;this[_0x5a770a(0x15f)](_0x3700d4);})[_0x4fdc9b(0x1f9)](_0x11cb17=>{const _0x173a9a=_0x4fdc9b;console[_0x173a9a(0x1aa)](_0x11cb17);});})['catch'](_0xc403c3=>{const _0x60b6a9=_0x1c31a4;console[_0x60b6a9(0x1aa)](_0xc403c3),!navigator[_0x60b6a9(0x151)]&&alert('You\x20Are\x20Disconnected\x20From\x20The\x20Internet,\x20Please\x20Connect\x20To\x20The\x20Internet\x20&\x20Refresh\x20(CTRL\x20+\x20R\x20Or\x20Right\x20Click)\x20For\x20The\x20App\x20To\x20Work');});},'displayWeather':function(_0xe465c6){const _0xbf9574=_0x1174,{name:_0x555b6,localtime:_0x5b6fc3,country:_0x4917b2}=_0xe465c6[_0xbf9574(0x178)],{icon:_0xf60222,text:_0x5c3acd,code:_0x240b05}=_0xe465c6[_0xbf9574(0x17b)][_0xbf9574(0x167)],{temp_c:_0xa6fd32,temp_f:_0x2d4e39,humidity:_0x3b952c,wind_kph:_0x486e2b,wind_mph:_0x252c62,wind_degree:_0x219f2d,wind_dir:_0x418f29,cloud:_0x5a639f,is_day:_0x5ab564,feelslike_c:_0x5c7db5,feelslike_f:_0x1e5bfd,vis_km:_0x580148,vis_miles:_0x1f49b8,uv:_0x45b865,pressure_mb:_0x5a010e,pressure_in:_0x435275}=_0xe465c6['current'],{co:_0x5266db,o3:_0xc925ef,no2:_0xc02b45,so2:_0x29b150,pm2_5:_0x5e6cb8,pm10:_0x227f2f}=_0xe465c6[_0xbf9574(0x17b)][_0xbf9574(0x168)],_0x914c02=_0xe465c6[_0xbf9574(0x17b)][_0xbf9574(0x168)][_0xbf9574(0x17c)],_0x496edc=_0xe465c6['current']['air_quality'][_0xbf9574(0x17f)],_0x45e8b9=_0xbf9574(0x194);console[_0xbf9574(0x1aa)](_0xbf9574(0x1a7)+_0x555b6,_0x45e8b9),console[_0xbf9574(0x1aa)](_0xbf9574(0x1c5)+_0x4917b2,_0x45e8b9),console[_0xbf9574(0x1aa)]('%cTemperature\x20In\x20Celsius:\x20'+_0xa6fd32+_0xbf9574(0x1fe),_0x45e8b9),console[_0xbf9574(0x1aa)](_0xbf9574(0x17e)+_0x2d4e39+_0xbf9574(0x1a0),_0x45e8b9),console[_0xbf9574(0x1aa)]('%cHumidity:\x20'+_0x3b952c+'%',_0x45e8b9),console[_0xbf9574(0x1aa)](_0xbf9574(0x192)+_0x486e2b+'\x20KM/h',_0x45e8b9),console[_0xbf9574(0x1aa)](_0xbf9574(0x156)+_0x252c62+_0xbf9574(0x1ad),_0x45e8b9),console[_0xbf9574(0x1aa)](_0xbf9574(0x1f3)+_0x5b6fc3,_0x45e8b9),console[_0xbf9574(0x1aa)](_0xbf9574(0x1f2)+_0x5a639f,_0x45e8b9),console[_0xbf9574(0x1aa)](_0xbf9574(0x1eb)+_0x219f2d+_0xbf9574(0x186),_0x45e8b9),console['log']('%cWind\x20Direction:\x20'+_0x418f29,_0x45e8b9),console[_0xbf9574(0x1aa)](_0xbf9574(0x1f1)+_0x5c7db5+'\x20C',_0x45e8b9),console[_0xbf9574(0x1aa)]('%cFeels\x20Like\x20In\x20F:\x20'+_0x1e5bfd+'\x20F',_0x45e8b9),console[_0xbf9574(0x1aa)]('%cVisibility\x20In\x20KM:\x20'+_0x580148,_0x45e8b9),console['log'](_0xbf9574(0x1cf)+_0x1f49b8,_0x45e8b9),console['log'](_0xbf9574(0x157)+_0x45b865,_0x45e8b9),console[_0xbf9574(0x1aa)](_0xbf9574(0x13d)+_0x5a010e,_0x45e8b9),console[_0xbf9574(0x1aa)]('%cPressure\x20In\x20Inches:\x20'+_0x435275,_0x45e8b9),console[_0xbf9574(0x1aa)]('%cCarbon\x20Monoxide:\x20'+_0x5266db+_0xbf9574(0x1dc),_0x45e8b9),console[_0xbf9574(0x1aa)](_0xbf9574(0x14e)+_0xc925ef+_0xbf9574(0x1dc),_0x45e8b9),console[_0xbf9574(0x1aa)](_0xbf9574(0x1ef)+_0xc02b45+_0xbf9574(0x1dc),_0x45e8b9),console[_0xbf9574(0x1aa)](_0xbf9574(0x1e0)+_0x29b150+_0xbf9574(0x1dc),_0x45e8b9),console['log'](_0xbf9574(0x143)+_0x5e6cb8+_0xbf9574(0x1dc),_0x45e8b9),console[_0xbf9574(0x1aa)]('%cPM10:\x20'+_0x227f2f+'\x20μg/m3',_0x45e8b9),console[_0xbf9574(0x1aa)]('%cAir\x20Index\x20(US\x20And\x20UK\x20Accordingly):\x20US:'+_0x914c02+'\x20/\x20UK:'+_0x496edc,_0x45e8b9),document['querySelector'](_0xbf9574(0x15a))[_0xbf9574(0x189)]=_0x555b6,document[_0xbf9574(0x153)](_0xbf9574(0x1f7))['innerHTML']=_0x4917b2,document['querySelector'](_0xbf9574(0x1b5))[_0xbf9574(0x138)]=_0xbf9574(0x1a6)+_0xf60222,document['querySelector'](_0xbf9574(0x135))[_0xbf9574(0x189)]=_0x5b6fc3,document['querySelector'](_0xbf9574(0x1e3))[_0xbf9574(0x189)]=_0x5c3acd,document[_0xbf9574(0x153)](_0xbf9574(0x197))[_0xbf9574(0x189)]=_0xa6fd32+'&#176;'+'C'+_0xbf9574(0x1b8)+'/'+'&nbsp;'+_0x2d4e39+_0xbf9574(0x1a5)+'F',document[_0xbf9574(0x153)](_0xbf9574(0x1df))[_0xbf9574(0x189)]=_0x5a639f+'%',document[_0xbf9574(0x153)](_0xbf9574(0x1e1))[_0xbf9574(0x189)]=_0x3b952c+'%',document['querySelector']('.wind')['innerHTML']=_0x486e2b+_0xbf9574(0x1b8)+_0xbf9574(0x195)+'&nbsp;'+'/'+_0xbf9574(0x1b8)+_0x252c62+_0xbf9574(0x1b8)+'Mph',document[_0xbf9574(0x153)](_0xbf9574(0x13c))[_0xbf9574(0x189)]=_0x219f2d+_0xbf9574(0x1a5),document[_0xbf9574(0x153)](_0xbf9574(0x13b))['innerHTML']=_0x418f29,document['querySelector'](_0xbf9574(0x1fa))[_0xbf9574(0x189)]=_0x5c7db5+_0xbf9574(0x1a5)+'C'+_0xbf9574(0x1b8)+'/'+_0xbf9574(0x1b8)+_0x1e5bfd+'&#176'+'F',document[_0xbf9574(0x153)](_0xbf9574(0x15e))[_0xbf9574(0x189)]=_0x580148+_0xbf9574(0x1b8)+'KM'+_0xbf9574(0x1b8)+'/'+_0xbf9574(0x1b8)+_0x1f49b8+'&nbsp;'+_0xbf9574(0x176),document[_0xbf9574(0x153)](_0xbf9574(0x1cc))[_0xbf9574(0x189)]=_0x45b865,document[_0xbf9574(0x153)](_0xbf9574(0x1f5))['innerHTML']=_0x5a010e+'&nbsp;'+'MB'+_0xbf9574(0x1b8)+'/'+'&nbsp;'+_0x435275+_0xbf9574(0x1b8)+'IN',document[_0xbf9574(0x153)](_0xbf9574(0x1ce))[_0xbf9574(0x189)]=Math[_0xbf9574(0x1af)](_0x5266db)+_0xbf9574(0x1b8)+_0xbf9574(0x1dd),document[_0xbf9574(0x153)]('.ozone')['innerHTML']=Math[_0xbf9574(0x1af)](_0xc925ef)+_0xbf9574(0x1b8)+_0xbf9574(0x1dd),document[_0xbf9574(0x153)](_0xbf9574(0x187))[_0xbf9574(0x189)]=Math[_0xbf9574(0x1af)](_0xc02b45)+_0xbf9574(0x1b8)+_0xbf9574(0x1dd),document['querySelector'](_0xbf9574(0x1c7))['innerHTML']=Math['trunc'](_0x29b150)+_0xbf9574(0x1b8)+_0xbf9574(0x1dd),document['querySelector']('.pm25')[_0xbf9574(0x189)]=Math[_0xbf9574(0x1af)](_0x5e6cb8)+'&nbsp;'+_0xbf9574(0x1dd),document[_0xbf9574(0x153)]('.pm10')[_0xbf9574(0x189)]=Math[_0xbf9574(0x1af)](_0x227f2f)+_0xbf9574(0x1b8)+_0xbf9574(0x1dd),document[_0xbf9574(0x153)](_0xbf9574(0x1d7))[_0xbf9574(0x189)]=_0x914c02,document[_0xbf9574(0x153)]('.ukdefraindex')[_0xbf9574(0x189)]=_0x496edc;if(_0x240b05==0x3e8)document[_0xbf9574(0x17a)][_0xbf9574(0x1b9)][_0xbf9574(0x16f)]='url(./assets/images/day/clearday.webp)',document[_0xbf9574(0x17a)][_0xbf9574(0x1b9)][_0xbf9574(0x15d)]=_0xbf9574(0x1d6),document[_0xbf9574(0x17a)][_0xbf9574(0x1b9)][_0xbf9574(0x1c3)]=_0xbf9574(0x1e6),document[_0xbf9574(0x17a)][_0xbf9574(0x1b9)][_0xbf9574(0x1b2)]=_0xbf9574(0x183),document[_0xbf9574(0x153)](_0xbf9574(0x1ee))[_0xbf9574(0x1b9)]['background']=_0xbf9574(0x199),document[_0xbf9574(0x17a)][_0xbf9574(0x1b9)][_0xbf9574(0x1ab)]=_0xbf9574(0x1f4),_0x5ab564=='0'&&(document[_0xbf9574(0x17a)][_0xbf9574(0x1b9)][_0xbf9574(0x16f)]=_0xbf9574(0x1bf),document[_0xbf9574(0x17a)]['style'][_0xbf9574(0x15d)]=_0xbf9574(0x1d6),document[_0xbf9574(0x17a)][_0xbf9574(0x1b9)][_0xbf9574(0x1c3)]=_0xbf9574(0x1e6),document[_0xbf9574(0x17a)]['style'][_0xbf9574(0x1b2)]='no-repeat',document['querySelector'](_0xbf9574(0x1ee))['style'][_0xbf9574(0x1c6)]=_0xbf9574(0x174),document[_0xbf9574(0x17a)][_0xbf9574(0x1b9)][_0xbf9574(0x1ab)]=_0xbf9574(0x1f4));else{if(_0x240b05==0x3eb||_0x240b05==0x3ee||_0x240b05==0x3f1||_0x240b05==0x406||_0x240b05==0x42d||_0x240b05==0x43f||_0x240b05==0x46f||_0x240b05==0x4f9||_0x240b05==0x4fc||_0x240b05==0x4ff||_0x240b05==0x502)document[_0xbf9574(0x17a)][_0xbf9574(0x1b9)][_0xbf9574(0x16f)]=_0xbf9574(0x177),document[_0xbf9574(0x17a)]['style'][_0xbf9574(0x15d)]=_0xbf9574(0x1d6),document[_0xbf9574(0x17a)]['style'][_0xbf9574(0x1c3)]=_0xbf9574(0x1e6),document[_0xbf9574(0x17a)][_0xbf9574(0x1b9)][_0xbf9574(0x1b2)]=_0xbf9574(0x183),document[_0xbf9574(0x153)](_0xbf9574(0x1ee))[_0xbf9574(0x1b9)]['background']=_0xbf9574(0x172),document['body'][_0xbf9574(0x1b9)][_0xbf9574(0x1ab)]=_0xbf9574(0x1f4),_0x5ab564=='0'&&(document['body'][_0xbf9574(0x1b9)][_0xbf9574(0x16f)]=_0xbf9574(0x142),document[_0xbf9574(0x17a)]['style'][_0xbf9574(0x15d)]=_0xbf9574(0x1d6),document[_0xbf9574(0x17a)][_0xbf9574(0x1b9)][_0xbf9574(0x1c3)]=_0xbf9574(0x1e6),document['body'][_0xbf9574(0x1b9)][_0xbf9574(0x1b2)]=_0xbf9574(0x183),document[_0xbf9574(0x153)](_0xbf9574(0x1ee))['style'][_0xbf9574(0x1c6)]='#181e27',document[_0xbf9574(0x17a)][_0xbf9574(0x1b9)][_0xbf9574(0x1ab)]=_0xbf9574(0x1f4));else _0x240b05==0x427||_0x240b05==0x42d||_0x240b05==0x430||_0x240b05==0x47e||_0x240b05==0x481||_0x240b05==0x49c||_0x240b05==0x49f||_0x240b05==0x4a2||_0x240b05==0x4a5||_0x240b05==0x4a8||_0x240b05==0x4ab||_0x240b05==0x4b4||_0x240b05==0x4b7||_0x240b05==0x4d8||_0x240b05==0x4db||_0x240b05==0x4de||_0x240b05==0x4e1||_0x240b05==0x4e4?(document[_0xbf9574(0x17a)][_0xbf9574(0x1b9)][_0xbf9574(0x16f)]='url(./assets/images/day/rainyday.webp)',document[_0xbf9574(0x17a)][_0xbf9574(0x1b9)][_0xbf9574(0x15d)]=_0xbf9574(0x1d6),document[_0xbf9574(0x17a)]['style']['backgroundSize']=_0xbf9574(0x1e6),document[_0xbf9574(0x17a)]['style'][_0xbf9574(0x1b2)]=_0xbf9574(0x183),document[_0xbf9574(0x153)](_0xbf9574(0x1ee))[_0xbf9574(0x1b9)][_0xbf9574(0x1c6)]=_0xbf9574(0x16d),document[_0xbf9574(0x17a)][_0xbf9574(0x1b9)][_0xbf9574(0x1ab)]=_0xbf9574(0x1f4),_0x5ab564=='0'&&(document['body'][_0xbf9574(0x1b9)][_0xbf9574(0x16f)]=_0xbf9574(0x1de),document[_0xbf9574(0x17a)][_0xbf9574(0x1b9)][_0xbf9574(0x15d)]=_0xbf9574(0x1d6),document[_0xbf9574(0x17a)]['style'][_0xbf9574(0x1c3)]=_0xbf9574(0x1e6),document['body'][_0xbf9574(0x1b9)][_0xbf9574(0x1b2)]='no-repeat',document[_0xbf9574(0x153)](_0xbf9574(0x1ee))[_0xbf9574(0x1b9)]['background']=_0xbf9574(0x1d2),document['body'][_0xbf9574(0x1b9)][_0xbf9574(0x1ab)]=_0xbf9574(0x1f4))):(document['body'][_0xbf9574(0x1b9)][_0xbf9574(0x16f)]=_0xbf9574(0x181),document[_0xbf9574(0x17a)][_0xbf9574(0x1b9)][_0xbf9574(0x15d)]=_0xbf9574(0x1d6),document[_0xbf9574(0x17a)][_0xbf9574(0x1b9)][_0xbf9574(0x1c3)]=_0xbf9574(0x1e6),document[_0xbf9574(0x17a)][_0xbf9574(0x1b9)]['backgroundRepeat']=_0xbf9574(0x183),document[_0xbf9574(0x153)](_0xbf9574(0x1ee))[_0xbf9574(0x1b9)][_0xbf9574(0x1c6)]=_0xbf9574(0x1d8),document[_0xbf9574(0x17a)][_0xbf9574(0x1b9)]['transition']='2s\x20ease',_0x5ab564=='0'&&(document[_0xbf9574(0x17a)]['style'][_0xbf9574(0x16f)]=_0xbf9574(0x13f),document[_0xbf9574(0x17a)][_0xbf9574(0x1b9)][_0xbf9574(0x15d)]='center',document['body'][_0xbf9574(0x1b9)]['backgroundSize']='cover',document[_0xbf9574(0x17a)][_0xbf9574(0x1b9)][_0xbf9574(0x1b2)]=_0xbf9574(0x183),document[_0xbf9574(0x153)](_0xbf9574(0x1ee))[_0xbf9574(0x1b9)][_0xbf9574(0x1c6)]=_0xbf9574(0x1d8),document['body'][_0xbf9574(0x1b9)][_0xbf9574(0x1ab)]=_0xbf9574(0x1f4)));}},'displayAstronomy':function(_0x156715){const _0x24a59b=_0x1174,{sunrise:_0x312130,sunset:_0x390f88,moonrise:_0x7b0efd,moonset:_0x18bca,moon_phase:_0x2ecd7f,moon_illumination:_0x21cfa7}=_0x156715[_0x24a59b(0x182)][_0x24a59b(0x175)],_0x42641a='\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background:\x20#282c34;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:\x20#ffffff;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20padding:\x2010px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20font-family:\x20\x22Helvetica\x20Neue\x22,\x20Helvetica,\x20Arial,\x20sans-serif;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20font-size:\x2014px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20line-height:\x201.6;\x0a\x20\x20\x20\x20\x20\x20\x20\x20';console[_0x24a59b(0x1aa)](_0x24a59b(0x13e)+_0x312130,_0x42641a),console['log'](_0x24a59b(0x18f)+_0x390f88,_0x42641a),console['log'](_0x24a59b(0x165)+_0x7b0efd,_0x42641a),console[_0x24a59b(0x1aa)]('%c\x20Moonset:\x20%c\x20'+_0x18bca,_0x42641a),console[_0x24a59b(0x1aa)](_0x24a59b(0x149)+_0x2ecd7f,_0x42641a),console[_0x24a59b(0x1aa)](_0x24a59b(0x1d3)+_0x21cfa7,_0x42641a),document[_0x24a59b(0x153)](_0x24a59b(0x1fb))[_0x24a59b(0x189)]=_0x312130,document[_0x24a59b(0x153)](_0x24a59b(0x18a))['innerHTML']=_0x390f88,document[_0x24a59b(0x153)](_0x24a59b(0x14f))[_0x24a59b(0x189)]=_0x7b0efd,document[_0x24a59b(0x153)](_0x24a59b(0x1ba))[_0x24a59b(0x189)]=_0x18bca,document['querySelector'](_0x24a59b(0x1f6))[_0x24a59b(0x189)]=_0x2ecd7f,document[_0x24a59b(0x153)](_0x24a59b(0x1d5))[_0x24a59b(0x189)]=_0x21cfa7;},'search':function(){const _0x6deae2=_0x1174;this['fetchWeather'](document[_0x6deae2(0x153)](_0x6deae2(0x1d1))[_0x6deae2(0x1ae)]);}};function _0x6311(){const _0x4cb498=['Delhi','#647d75','Abidjan','backgroundImage','Brussels','Addis\x20Ababa','#fa6d1b','Bangkok','#181e27','astro','Miles','url(./assets/images/day/cloudyday.webp)','location','random','body','current','us-epa-index','addEventListener','%cTemperature\x20In\x20Fahrenheit:\x20','gb-defra-index','Durban','url(./assets/images/day/snowyday.webp)','astronomy','no-repeat','12523naNYAX','search','\x20Degrees','.nitrodiox','keyup','innerHTML','.sunset','Stuttgart','Dar\x20es\x20Salaam','Sao\x20Paulo','Hyderabad','%c\x20Sunset:\x20%c\x20','Nairobi','Giza','%cWind\x20Speed\x20In\x20KM/H:\x20','Hangzhou','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background:\x20#282c34;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:\x20#ffffff;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20padding:\x2010px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20font-family:\x20\x22Helvetica\x20Neue\x22,\x20Helvetica,\x20Arial,\x20sans-serif;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20font-size:\x2014px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20line-height:\x201.6;\x0a\x20\x20\x20\x20\x20\x20\x20\x20','KMph','9USWVxc','.temp','https://api.weatherapi.com/v1/current.json?key=','#e5ba92','Surat','Brasilia','348KdaKDc','Sana\x27a','Lahore','Cologne','\x20Degrees\x20F','Tianjin','Hanoi','76fFjTbi','109974hdkwig','&#176;','https:','%cName:\x20','offline','Miami','log','transition','Lagos','\x20MP/h','value','trunc','Lucknow','fetchWeather','backgroundRepeat','Enter','London','.icon','Jeddah','Shanghai','&nbsp;','style','.moonset','Frankfurt','Mumbai','Karachi','City\x20Not\x20Found.\x20You\x20May\x20Have\x20Typed\x20In\x20An\x20Invalid\x20Name\x20Or\x20Left\x20The\x20Search\x20Bar\x20Blank.','url(./assets/images/night/clearnight.webp)','apiKey','Dhaka','Guangzhou','backgroundSize','1086jFWKwu','%cCountry:\x20','background','.sulphdiox','Osaka','Nuremberg','Istanbul','21351QpjHxP','.uvindex','4220uZSVpm','.carbmonx','%cVisibility\x20In\x20Miles:\x20','953gtSXtt','.search','#325c80','%c\x20Moon\x20Illumination:\x20%c\x20','https://api.weatherapi.com/v1/astronomy.json?key=','.moonillum','center','.usepaindex','#1b1b1b','240PQMuWj','Kolkata','Helsinki','\x20μg/m3','μg/m3','url(./assets/images/night/rainynight.webp)','.cloud','%cSO2:\x20','.humidity','floor','.condition','Athens','Pyongyang','cover','269900ppJJKf','Mexico\x20City','Chengdu','Seoul','%cWind\x20Direction\x20In\x20Degrees:\x20','Santiago','Bogota','.submit','%cNO2:\x20','Bangalore','%cFeels\x20Like\x20In\x20C:\x20','%cCloud\x20Percentile:\x20','%cCurrent\x20Date\x20And\x20Time:\x20','2s\x20ease','.pressure','.moonphase','.country','Chongqing','catch','.feelslike','.sunrise','Moscow','Johannesburg','\x20Degrees\x20C','.datetime','Mogadishu','Curitiba','src','Saint\x20Petersburg','Nanjing','.winddir','.winddeg','%cPressure\x20In\x20Millibars:\x20','%c\x20Sunrise:\x20%c\x20','url(./assets/images/night/snowynight.webp)','Jakarta','Shijiazhuang','url(./assets/images/night/cloudynight.webp)','%cPM2.5:\x20','Casablanca','then','Baghdad','Melbourne','Ahmedabad','%c\x20Moon\x20Phase:\x20%c\x20','Berlin','Copenhagen','Manila','Algiers','%cO3:\x20','.moonrise','json','onLine','Buenos\x20Aires','querySelector','Rio\x20de\x20Janeiro','Marseille','%cWind\x20Speed\x20In\x20Miles:\x20','%cUV\x20Index:\x20','Hong\x20Kong','Colombo','.name','Kuala\x20Lumpur','Oslo','backgroundPosition','.visib','displayAstronomy','Navi\x20Mumbai','Failed\x20to\x20fetch\x20astronomy\x20data.','Tokyo','4475ATQIJx','Beijing','%c\x20Moonrise:\x20%c\x20','You\x20Are\x20Disconnected\x20From\x20The\x20Internet,\x20Please\x20Connect\x20To\x20An\x20Internet\x20&\x20Refresh\x20(CTRL\x20+\x20R\x20Or\x20Right\x20Click)\x20For\x20The\x20App\x20To\x20Work','condition','air_quality','Kinshasa','click','Cairo'];_0x6311=function(){return _0x4cb498;};return _0x6311();}document[_0x29375d(0x153)](_0x29375d(0x1ee))['addEventListener'](_0x29375d(0x16a),function(){const _0x50dfea=_0x29375d;weather[_0x50dfea(0x185)]();}),document['querySelector'](_0x29375d(0x1d1))[_0x29375d(0x17d)](_0x29375d(0x188),function(){const _0x5dac98=_0x29375d;event['key']==_0x5dac98(0x1b3)&&weather[_0x5dac98(0x185)]();});const cityNames=[_0x29375d(0x162),_0x29375d(0x16c),_0x29375d(0x1b7),_0x29375d(0x18d),_0x29375d(0x1bc),_0x29375d(0x164),_0x29375d(0x16b),_0x29375d(0x1c1),_0x29375d(0x1e8),_0x29375d(0x1c8),_0x29375d(0x1bd),_0x29375d(0x1f8),_0x29375d(0x1ca),_0x29375d(0x152),_0x29375d(0x1da),_0x29375d(0x1ac),_0x29375d(0x169),_0x29375d(0x14c),_0x29375d(0x154),_0x29375d(0x1c2),_0x29375d(0x19e),'Shenzhen',_0x29375d(0x1f0),_0x29375d(0x1fc),_0x29375d(0x1a1),_0x29375d(0x140),_0x29375d(0x1b4),'Lima',_0x29375d(0x173),'New\x20York\x20City',_0x29375d(0x1ed),'Ho\x20Chi\x20Minh\x20City',_0x29375d(0x158),_0x29375d(0x146),'Chennai',_0x29375d(0x1f0),_0x29375d(0x18e),'Wuhan',_0x29375d(0x193),_0x29375d(0x148),_0x29375d(0x15b),_0x29375d(0x1ea),'Riyadh',_0x29375d(0x141),_0x29375d(0x1ec),'Madrid',_0x29375d(0x159),'Alexandria','Sydney',_0x29375d(0x139),_0x29375d(0x19a),_0x29375d(0x1fd),_0x29375d(0x1e9),'Kanpur',_0x29375d(0x191),_0x29375d(0x14a),_0x29375d(0x180),_0x29375d(0x14d),_0x29375d(0x1a2),_0x29375d(0x13a),_0x29375d(0x144),_0x29375d(0x1e5),_0x29375d(0x190),'Kabul',_0x29375d(0x171),_0x29375d(0x136),_0x29375d(0x160),_0x29375d(0x1b6),_0x29375d(0x1b0),_0x29375d(0x18c),_0x29375d(0x1a9),_0x29375d(0x1e4),_0x29375d(0x147),_0x29375d(0x137),_0x29375d(0x19b),'Jaipur','Havana',_0x29375d(0x19d),'Hamburg',_0x29375d(0x19f),_0x29375d(0x1bb),_0x29375d(0x18b),_0x29375d(0x16e),_0x29375d(0x1c9),'Dusseldorf',_0x29375d(0x155),'Muscat',_0x29375d(0x15c),_0x29375d(0x170),_0x29375d(0x1db),_0x29375d(0x14b),'Amsterdam','Abu\x20Dhabi','Dubai'];function cityRandomSelect(_0x1dff51){const _0x524e5e=_0x29375d;return _0x1dff51[Math[_0x524e5e(0x1e2)](Math[_0x524e5e(0x179)]()*_0x1dff51['length'])];}weather[_0x29375d(0x1b1)](cityRandomSelect(cityNames)),window[_0x29375d(0x17d)](_0x29375d(0x1a8),function(){const _0x419b64=_0x29375d;alert(_0x419b64(0x166));});
+let weather = {
+    "apiKey": "20a1f64cdfbf4af3b6f121849222508",
+    fetchWeather: function(city) {
+        fetch(
+            "https://api.weatherapi.com/v1/current.json?key=" 
+            + this.apiKey 
+            + "&q="
+            + city
+            + "&aqi=yes"
+        )
+        .then((response) => {
+            if (!response.ok) {
+                alert("City Not Found. You May Have Typed In An Invalid Name Or Left The Search Bar Blank.");
+                throw new Error("City Not Found. You May Have Typed In An Invalid Name Or Left The Search Bar Blank.");
+            }
+            return response.json();
+        })
+        .then((data) => {
+            this.displayWeather(data);
+            fetch(
+                "https://api.weatherapi.com/v1/astronomy.json?key=" 
+                + this.apiKey 
+                + "&q="
+                + city
+            )
+            .then((response) => {
+                if (!response.ok) {
+                    throw new Error("Failed to fetch astronomy data.");
+                }
+                return response.json();
+            })
+            .then((astronomyData) => {
+                this.displayAstronomy(astronomyData);
+            })
+            .catch(error => {
+                console.log(error);
+            });
+        })
+        .catch(error => {
+            console.log(error);
+            if (!navigator.onLine) {
+                alert('You Are Disconnected From The Internet, Please Connect To The Internet & Refresh (CTRL + R Or Right Click) For The App To Work');
+            }
+        });
+    },
+    displayWeather: function(data) {
+        const { name, localtime, country } = data.location;
+        const { icon, text, code } = data.current.condition;
+        const { temp_c, temp_f, humidity, wind_kph, wind_mph, wind_degree, wind_dir, cloud, is_day, feelslike_c, feelslike_f, vis_km, vis_miles, uv, pressure_mb, pressure_in } = data.current;
+        const { co, o3, no2, so2, pm2_5, pm10 } = data.current.air_quality;
+        const usepaindex = data.current.air_quality['us-epa-index'];
+        const ukdefraindex = data.current.air_quality['gb-defra-index'];
+        const logStyles = `
+            background: #282c34;
+            color: #ffffff;
+            padding: 10px;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            line-height: 1.6;
+        `;
+        console.log(`%cName: ${name}`, logStyles);
+        console.log(`%cCountry: ${country}`, logStyles);
+        console.log(`%cTemperature In Celsius: ${temp_c} Degrees C`, logStyles);
+        console.log(`%cTemperature In Fahrenheit: ${temp_f} Degrees F`, logStyles);
+        console.log(`%cHumidity: ${humidity}%`, logStyles);
+        console.log(`%cWind Speed In KM/H: ${wind_kph} KM/h`, logStyles);
+        console.log(`%cWind Speed In Miles: ${wind_mph} MP/h`, logStyles);
+        console.log(`%cCurrent Date And Time: ${localtime}`, logStyles);
+        console.log(`%cCloud Percentile: ${cloud}`, logStyles);
+        console.log(`%cWind Direction In Degrees: ${wind_degree} Degrees`, logStyles);
+        console.log(`%cWind Direction: ${wind_dir}`, logStyles);
+        console.log(`%cFeels Like In C: ${feelslike_c} C`, logStyles);
+        console.log(`%cFeels Like In F: ${feelslike_f} F`, logStyles);
+        console.log(`%cVisibility In KM: ${vis_km}`, logStyles);
+        console.log(`%cVisibility In Miles: ${vis_miles}`, logStyles);
+        console.log(`%cUV Index: ${uv}`, logStyles);
+        console.log(`%cPressure In Millibars: ${pressure_mb}`, logStyles);
+        console.log(`%cPressure In Inches: ${pressure_in}`, logStyles);
+        console.log(`%cCarbon Monoxide: ${co} μg/m3`, logStyles);
+        console.log(`%cO3: ${o3} μg/m3`, logStyles);
+        console.log(`%cNO2: ${no2} μg/m3`, logStyles);
+        console.log(`%cSO2: ${so2} μg/m3`, logStyles);
+        console.log(`%cPM2.5: ${pm2_5} μg/m3`, logStyles);
+        console.log(`%cPM10: ${pm10} μg/m3`, logStyles);
+        console.log(`%cAir Index (US And UK Accordingly): US:${usepaindex} / UK:${ukdefraindex}`, logStyles);
+        document.querySelector(".name").innerHTML = name;
+        document.querySelector(".country").innerHTML = country;
+        document.querySelector(".icon").src = "https:" + icon;
+        document.querySelector(".datetime").innerHTML = localtime;
+        document.querySelector(".condition").innerHTML = text;
+        document.querySelector(".temp").innerHTML = temp_c + "&#176;" + "C" + "&nbsp;" + "/" + "&nbsp;" + temp_f + "&#176;" + "F";
+        document.querySelector(".cloud").innerHTML = cloud + "%";
+        document.querySelector(".humidity").innerHTML = humidity + "%";
+        document.querySelector(".wind").innerHTML = wind_kph + "&nbsp;" + "KMph" + "&nbsp;" + "/" + "&nbsp;" + wind_mph + "&nbsp;" + "Mph";
+        document.querySelector(".winddeg").innerHTML = wind_degree + "&#176;";
+        document.querySelector(".winddir").innerHTML = wind_dir;
+        document.querySelector(".feelslike").innerHTML = feelslike_c + "&#176;" + "C" + "&nbsp;" + "/" + "&nbsp;" + feelslike_f + "&#176" + "F";
+        document.querySelector(".visib").innerHTML = vis_km + "&nbsp;" + "KM" + "&nbsp;" + "/" + "&nbsp;" + vis_miles + "&nbsp;" + "Miles" ;
+        document.querySelector(".uvindex").innerHTML = uv;
+        document.querySelector(".pressure").innerHTML = pressure_mb + "&nbsp;" + "MB" + "&nbsp;" + "/" + "&nbsp;" + pressure_in + "&nbsp;" + "IN";
+        document.querySelector(".carbmonx").innerHTML = Math.trunc(co) + "&nbsp;" + "μg/m3";
+        document.querySelector(".ozone").innerHTML = Math.trunc(o3) + "&nbsp;" + "μg/m3";
+        document.querySelector(".nitrodiox").innerHTML = Math.trunc(no2) + "&nbsp;" + "μg/m3";
+        document.querySelector(".sulphdiox").innerHTML = Math.trunc(so2) + "&nbsp;" + "μg/m3";
+        document.querySelector(".pm25").innerHTML = Math.trunc(pm2_5) + "&nbsp;" + "μg/m3";
+        document.querySelector(".pm10").innerHTML = Math.trunc(pm10) + "&nbsp;" + "μg/m3";
+        document.querySelector(".usepaindex").innerHTML = usepaindex;
+        document.querySelector(".ukdefraindex").innerHTML = ukdefraindex;
+        if (code == 1000) {
+            document.body.style.backgroundImage = `url(./assets/images/day/clearday.webp)`;
+            document.body.style.backgroundPosition = "center"
+            document.body.style.backgroundSize = "cover"
+            document.body.style.backgroundRepeat = "no-repeat"
+            document.querySelector(".submit").style.background = "#e5ba92";
+            document.body.style.transition = "2s ease";
+            if (is_day == "0") {
+                document.body.style.backgroundImage = `url(./assets/images/night/clearnight.webp)`;
+                document.body.style.backgroundPosition = "center"
+                document.body.style.backgroundSize = "cover"
+                document.body.style.backgroundRepeat = "no-repeat"
+                document.querySelector(".submit").style.background = "#181e27";
+                document.body.style.transition = "2s ease";
+            }
+        } else if (
+            code == 1003 ||
+            code == 1006 ||
+            code == 1009 ||
+            code == 1030 ||
+            code == 1069 ||
+            code == 1087 ||
+            code == 1135 ||
+            code == 1273 ||
+            code == 1276 ||
+            code == 1279 ||
+            code == 1282
+        ) {
+            document.body.style.backgroundImage = `url(./assets/images/day/cloudyday.webp)`;
+            document.body.style.backgroundPosition = "center"
+            document.body.style.backgroundSize = "cover"
+            document.body.style.backgroundRepeat = "no-repeat"
+            document.querySelector(".submit").style.background = "#fa6d1b";
+            document.body.style.transition = "2s ease";
+            if (is_day == "0") {
+                document.body.style.backgroundImage = `url(./assets/images/night/cloudynight.webp)`;
+                document.body.style.backgroundPosition = "center"
+                document.body.style.backgroundSize = "cover"
+                document.body.style.backgroundRepeat = "no-repeat"
+                document.querySelector(".submit").style.background = "#181e27";
+                document.body.style.transition = "2s ease";
+            }
+        } else if (
+            code == 1063 ||
+            code == 1069 ||
+            code == 1072 ||
+            code == 1150 ||
+            code == 1153 ||
+            code == 1180 ||
+            code == 1183 ||
+            code == 1186 ||
+            code == 1189 ||
+            code == 1192 ||
+            code == 1195 ||
+            code == 1204 ||
+            code == 1207 ||
+            code == 1240 ||
+            code == 1243 ||
+            code == 1246 ||
+            code == 1249 ||
+            code == 1252
+        ) {
+            document.body.style.backgroundImage = `url(./assets/images/day/rainyday.webp)`;
+            document.body.style.backgroundPosition = "center"
+            document.body.style.backgroundSize = "cover"
+            document.body.style.backgroundRepeat = "no-repeat"
+            document.querySelector(".submit").style.background = "#647d75";
+            document.body.style.transition = "2s ease";
+            if (is_day == "0") {
+                document.body.style.backgroundImage = `url(./assets/images/night/rainynight.webp)`;
+                document.body.style.backgroundPosition = "center"
+                document.body.style.backgroundSize = "cover"
+                document.body.style.backgroundRepeat = "no-repeat"
+                document.querySelector(".submit").style.background = "#325c80";
+                document.body.style.transition = "2s ease";
+            }
+        } else {
+            document.body.style.backgroundImage = `url(./assets/images/day/snowyday.webp)`;
+            document.body.style.backgroundPosition = "center"
+            document.body.style.backgroundSize = "cover"
+            document.body.style.backgroundRepeat = "no-repeat"
+            document.querySelector(".submit").style.background = "#1b1b1b";
+            document.body.style.transition = "2s ease";
+            if (is_day == "0") {
+                document.body.style.backgroundImage = `url(./assets/images/night/snowynight.webp)`;
+                document.body.style.backgroundPosition = "center"
+                document.body.style.backgroundSize = "cover"
+                document.body.style.backgroundRepeat = "no-repeat"
+                document.querySelector(".submit").style.background = "#1b1b1b";
+                document.body.style.transition = "2s ease";
+            }
+        }
+    },
+    displayAstronomy: function(data) {
+        const { sunrise, sunset, moonrise, moonset, moon_phase, moon_illumination } = data.astronomy.astro;
+        const logStyles2 = `
+            background: #282c34;
+            color: #ffffff;
+            padding: 10px;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            line-height: 1.6;
+        `;
+        console.log(`%c Sunrise: %c ${sunrise}`, logStyles2);
+        console.log(`%c Sunset: %c ${sunset}`, logStyles2);
+        console.log(`%c Moonrise: %c ${moonrise}`, logStyles2);
+        console.log(`%c Moonset: %c ${moonset}`, logStyles2);
+        console.log(`%c Moon Phase: %c ${moon_phase}`, logStyles2);
+        console.log(`%c Moon Illumination: %c ${moon_illumination}`, logStyles2);
+        document.querySelector(".sunrise").innerHTML = sunrise;
+        document.querySelector(".sunset").innerHTML = sunset;
+        document.querySelector(".moonrise").innerHTML = moonrise;
+        document.querySelector(".moonset").innerHTML = moonset;
+        document.querySelector(".moonphase").innerHTML = moon_phase;
+        document.querySelector(".moonillum").innerHTML = moon_illumination;
+    },
+    search: function() {
+        this.fetchWeather(document.querySelector(".search").value);
+    }
+};
 
-console.log("There Is Nothing Here, Go Away! >:(")
+document.querySelector(".submit").addEventListener("click", function() {
+    weather.search();
+});
+
+document.querySelector(".search").addEventListener("keyup", function() {
+    if (event.key == "Enter") {
+        weather.search();
+    }
+});
+
+const cityNames = [
+    "Tokyo",
+    "Delhi",
+    "Shanghai",
+    "Sao Paulo",
+    "Mumbai",
+    "Beijing",
+    "Cairo",
+    "Dhaka",
+    "Mexico City",
+    "Osaka",
+    "Karachi",
+    "Chongqing",
+    "Istanbul",
+    "Buenos Aires",
+    "Kolkata",
+    "Lagos",
+    "Kinshasa",
+    "Manila",
+    "Rio de Janeiro",
+    "Guangzhou",
+    "Lahore",
+    "Shenzhen",
+    "Bangalore",
+    "Moscow",
+    "Tianjin",
+    "Jakarta",
+    "London",
+    "Lima",
+    "Bangkok",
+    "New York City",
+    "Bogota",
+    "Ho Chi Minh City",
+    "Hong Kong",
+    "Baghdad",
+    "Chennai",
+    "Bangalore",
+    "Hyderabad",
+    "Wuhan",
+    "Hangzhou",
+    "Ahmedabad",
+    "Kuala Lumpur",
+    "Seoul",
+    "Riyadh",
+    "Shijiazhuang",
+    "Santiago",
+    "Madrid",
+    "Colombo",
+    "Alexandria",
+    "Sydney",
+    "Saint Petersburg",
+    "Surat",
+    "Johannesburg",
+    "Chengdu",
+    "Kanpur",
+    "Giza",
+    "Berlin",
+    "Durban",
+    "Algiers",
+    "Hanoi",
+    "Nanjing",
+    "Casablanca",
+    "Pyongyang",
+    "Nairobi",
+    "Kabul",
+    "Addis Ababa",
+    "Mogadishu",
+    "Navi Mumbai",
+    "Jeddah",
+    "Lucknow",
+    "Dar es Salaam",
+    "Miami",
+    "Athens",
+    "Melbourne",
+    "Curitiba",
+    "Brasilia",
+    "Jaipur",
+    "Havana",
+    "Sana'a",
+    "Hamburg",
+    "Cologne",
+    "Frankfurt",
+    "Stuttgart",
+    "Abidjan",
+    "Nuremberg",
+    "Dusseldorf",
+    "Marseille",
+    "Muscat",
+    "Oslo",
+    "Brussels",
+    "Helsinki",
+    "Copenhagen",
+    "Amsterdam",
+    "Abu Dhabi",
+    "Dubai"
+]  
+
+function cityRandomSelect(cityNames) {
+    return cityNames[Math.floor(Math.random()*cityNames.length)];
+}
+
+weather.fetchWeather(cityRandomSelect(cityNames));
+
+window.addEventListener("offline",function(){
+    alert('You Are Disconnected From The Internet, Please Connect To An Internet & Refresh (CTRL + R Or Right Click) For The App To Work')
+})
