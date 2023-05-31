@@ -17,6 +17,7 @@ let weather = {
         })
         .then((data) => {
             this.displayWeather(data);
+            console.log(data);
             fetch(
                 "https://api.weatherapi.com/v1/astronomy.json?key=" 
                 + this.apiKey 
@@ -31,6 +32,7 @@ let weather = {
             })
             .then((astronomyData) => {
                 this.displayAstronomy(astronomyData);
+                console.log(astronomyData);
             })
             .catch(error => {
                 console.log(error);
@@ -289,14 +291,38 @@ const cityNames = [
     "Dubai"
 ]  
 
-function cityRandomSelect(cityNames) {
-    return cityNames[Math.floor(Math.random()*cityNames.length)];
+function cityRandomSelect() {
+    return fetch('https://restcountries.com/v3.1/all')
+        .then(response => response.json())
+        .then(data => {
+            const cities = data
+                .filter(country => country.capital && country.capital.length > 0)
+                .map(country => country.capital[0]);
+            
+            if (cities.length === 0) {
+                throw new Error('No valid cities found');
+            }
+            
+            const randomCity = cities[Math.floor(Math.random() * cities.length)];
+            console.log('Random City:', randomCity);
+            return randomCity;
+        })
+        .catch(error => {
+            console.error('Error fetching random city:', error);
+        });
 }
 
-weather.fetchWeather(cityRandomSelect(cityNames));
+cityRandomSelect()
+    .then(randomCity => {
+        weather.fetchWeather(randomCity);
+    })
+    .catch(error => {
+        console.error('Error fetching random city:', error);
+    });
+
 
 window.addEventListener("offline",function(){
     alert('You Are Disconnected From The Internet, Please Connect To An Internet & Refresh (CTRL + R Or Right Click) For The App To Work')
-})
+}),
 
 console.log("Go Away! You're Not Supposed To Be Here! 😡")
