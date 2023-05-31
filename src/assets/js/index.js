@@ -194,122 +194,24 @@ document.querySelector(".search").addEventListener("keyup", function() {
     }
 });
 
-const cityNames = [
-    "Tokyo",
-    "Delhi",
-    "Shanghai",
-    "Sao Paulo",
-    "Mumbai",
-    "Beijing",
-    "Cairo",
-    "Dhaka",
-    "Mexico City",
-    "Osaka",
-    "Karachi",
-    "Chongqing",
-    "Istanbul",
-    "Buenos Aires",
-    "Kolkata",
-    "Lagos",
-    "Kinshasa",
-    "Manila",
-    "Rio de Janeiro",
-    "Guangzhou",
-    "Lahore",
-    "Shenzhen",
-    "Bangalore",
-    "Moscow",
-    "Tianjin",
-    "Jakarta",
-    "London",
-    "Lima",
-    "Bangkok",
-    "New York City",
-    "Bogota",
-    "Ho Chi Minh City",
-    "Hong Kong",
-    "Baghdad",
-    "Chennai",
-    "Bangalore",
-    "Hyderabad",
-    "Wuhan",
-    "Hangzhou",
-    "Ahmedabad",
-    "Kuala Lumpur",
-    "Seoul",
-    "Riyadh",
-    "Shijiazhuang",
-    "Santiago",
-    "Madrid",
-    "Colombo",
-    "Alexandria",
-    "Sydney",
-    "Saint Petersburg",
-    "Surat",
-    "Johannesburg",
-    "Chengdu",
-    "Kanpur",
-    "Giza",
-    "Berlin",
-    "Durban",
-    "Algiers",
-    "Hanoi",
-    "Nanjing",
-    "Casablanca",
-    "Pyongyang",
-    "Nairobi",
-    "Kabul",
-    "Addis Ababa",
-    "Mogadishu",
-    "Navi Mumbai",
-    "Jeddah",
-    "Lucknow",
-    "Dar es Salaam",
-    "Miami",
-    "Athens",
-    "Melbourne",
-    "Curitiba",
-    "Brasilia",
-    "Jaipur",
-    "Havana",
-    "Sana'a",
-    "Hamburg",
-    "Cologne",
-    "Frankfurt",
-    "Stuttgart",
-    "Abidjan",
-    "Nuremberg",
-    "Dusseldorf",
-    "Marseille",
-    "Muscat",
-    "Oslo",
-    "Brussels",
-    "Helsinki",
-    "Copenhagen",
-    "Amsterdam",
-    "Abu Dhabi",
-    "Dubai"
-]  
+async function cityRandomSelect() {
+    try {
+        const response = await fetch('https://restcountries.com/v3.1/all');
+        const data = await response.json();
+        const cities = data
+            .filter(country => country.capital && country.capital.length > 0)
+            .map(country_1 => country_1.capital[0]);
 
-function cityRandomSelect() {
-    return fetch('https://restcountries.com/v3.1/all')
-        .then(response => response.json())
-        .then(data => {
-            const cities = data
-                .filter(country => country.capital && country.capital.length > 0)
-                .map(country => country.capital[0]);
-            
-            if (cities.length === 0) {
-                throw new Error('No valid cities found');
-            }
-            
-            const randomCity = cities[Math.floor(Math.random() * cities.length)];
-            console.log('Random City:', randomCity);
-            return randomCity;
-        })
-        .catch(error => {
-            console.error('Error fetching random city:', error);
-        });
+        if (cities.length === 0) {
+            throw new Error('No valid cities found');
+        }
+
+        const randomCity = cities[Math.floor(Math.random() * cities.length)];
+        console.log('Random City:', randomCity);
+        return randomCity;
+    } catch (error) {
+        console.error('Error fetching random city:', error);
+    }
 }
 
 cityRandomSelect()
