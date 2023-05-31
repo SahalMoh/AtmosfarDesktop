@@ -46,43 +46,10 @@ let weather = {
     displayWeather: function(data) {
         const { name, localtime, country } = data.location;
         const { icon, text, code } = data.current.condition;
-        const { temp_c, temp_f, humidity, wind_kph, wind_mph, wind_degree, wind_dir, cloud, is_day, feelslike_c, feelslike_f, vis_km, vis_miles, uv, pressure_mb, pressure_in } = data.current;
+        const { temp_c, temp_f, humidity, wind_kph, wind_mph, wind_degree, wind_dir, cloud, is_day, feelslike_c, feelslike_f, vis_km, vis_miles, uv, pressure_mb, pressure_in, gust_mph, gust_kph, precip_in, precip_mm } = data.current;
         const { co, o3, no2, so2, pm2_5, pm10 } = data.current.air_quality;
         const usepaindex = data.current.air_quality['us-epa-index'];
         const ukdefraindex = data.current.air_quality['gb-defra-index'];
-        const logStyles = `
-            background: #282c34;
-            color: #ffffff;
-            padding: 10px;
-            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-            font-size: 14px;
-            line-height: 1.6;
-        `;
-        console.log(`%cName: ${name}`, logStyles);
-        console.log(`%cCountry: ${country}`, logStyles);
-        console.log(`%cTemperature In Celsius: ${temp_c} Degrees C`, logStyles);
-        console.log(`%cTemperature In Fahrenheit: ${temp_f} Degrees F`, logStyles);
-        console.log(`%cHumidity: ${humidity}%`, logStyles);
-        console.log(`%cWind Speed In KM/H: ${wind_kph} KM/h`, logStyles);
-        console.log(`%cWind Speed In Miles: ${wind_mph} MP/h`, logStyles);
-        console.log(`%cCurrent Date And Time: ${localtime}`, logStyles);
-        console.log(`%cCloud Percentile: ${cloud}`, logStyles);
-        console.log(`%cWind Direction In Degrees: ${wind_degree} Degrees`, logStyles);
-        console.log(`%cWind Direction: ${wind_dir}`, logStyles);
-        console.log(`%cFeels Like In C: ${feelslike_c} C`, logStyles);
-        console.log(`%cFeels Like In F: ${feelslike_f} F`, logStyles);
-        console.log(`%cVisibility In KM: ${vis_km}`, logStyles);
-        console.log(`%cVisibility In Miles: ${vis_miles}`, logStyles);
-        console.log(`%cUV Index: ${uv}`, logStyles);
-        console.log(`%cPressure In Millibars: ${pressure_mb}`, logStyles);
-        console.log(`%cPressure In Inches: ${pressure_in}`, logStyles);
-        console.log(`%cCarbon Monoxide: ${co} μg/m3`, logStyles);
-        console.log(`%cO3: ${o3} μg/m3`, logStyles);
-        console.log(`%cNO2: ${no2} μg/m3`, logStyles);
-        console.log(`%cSO2: ${so2} μg/m3`, logStyles);
-        console.log(`%cPM2.5: ${pm2_5} μg/m3`, logStyles);
-        console.log(`%cPM10: ${pm10} μg/m3`, logStyles);
-        console.log(`%cAir Index (US And UK Accordingly): US:${usepaindex} / UK:${ukdefraindex}`, logStyles);
         document.querySelector(".name").innerHTML = name;
         document.querySelector(".country").innerHTML = country;
         document.querySelector(".icon").src = "https:" + icon;
@@ -91,7 +58,9 @@ let weather = {
         document.querySelector(".temp").innerHTML = temp_c + "&#176;" + "C" + "&nbsp;" + "/" + "&nbsp;" + temp_f + "&#176;" + "F";
         document.querySelector(".cloud").innerHTML = cloud + "%";
         document.querySelector(".humidity").innerHTML = humidity + "%";
+        document.querySelector(".precip").innerHTML = precip_mm + "&nbsp;" + "MM" + "&nbsp;" + "/" + "&nbsp;" + precip_in + "&nbsp;" + "IN";
         document.querySelector(".wind").innerHTML = wind_kph + "&nbsp;" + "KMph" + "&nbsp;" + "/" + "&nbsp;" + wind_mph + "&nbsp;" + "Mph";
+        document.querySelector(".gust").innerHTML = gust_kph + "&nbsp;" + "KMph" + "&nbsp;" + "/" + "&nbsp;" + gust_mph + "&nbsp;" + "Mph";
         document.querySelector(".winddeg").innerHTML = wind_degree + "&#176;";
         document.querySelector(".winddir").innerHTML = wind_dir;
         document.querySelector(".feelslike").innerHTML = feelslike_c + "&#176;" + "C" + "&nbsp;" + "/" + "&nbsp;" + feelslike_f + "&#176" + "F";
@@ -201,20 +170,6 @@ let weather = {
     },
     displayAstronomy: function(data) {
         const { sunrise, sunset, moonrise, moonset, moon_phase, moon_illumination } = data.astronomy.astro;
-        const logStyles2 = `
-            background: #282c34;
-            color: #ffffff;
-            padding: 10px;
-            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-            font-size: 14px;
-            line-height: 1.6;
-        `;
-        console.log(`%c Sunrise: %c ${sunrise}`, logStyles2);
-        console.log(`%c Sunset: %c ${sunset}`, logStyles2);
-        console.log(`%c Moonrise: %c ${moonrise}`, logStyles2);
-        console.log(`%c Moonset: %c ${moonset}`, logStyles2);
-        console.log(`%c Moon Phase: %c ${moon_phase}`, logStyles2);
-        console.log(`%c Moon Illumination: %c ${moon_illumination}`, logStyles2);
         document.querySelector(".sunrise").innerHTML = sunrise;
         document.querySelector(".sunset").innerHTML = sunset;
         document.querySelector(".moonrise").innerHTML = moonrise;
@@ -343,3 +298,5 @@ weather.fetchWeather(cityRandomSelect(cityNames));
 window.addEventListener("offline",function(){
     alert('You Are Disconnected From The Internet, Please Connect To An Internet & Refresh (CTRL + R Or Right Click) For The App To Work')
 })
+
+console.log("Go Away! You're Not Supposed To Be Here! 😡")
