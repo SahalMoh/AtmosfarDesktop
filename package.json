@@ -11,6 +11,11 @@
   "build": {
     "asar": true
   },
+  "keywords": [
+    "Atmosfär",
+    "Atmosfär Weather App",
+    "Atmosfär - The Weather At Your Fingertips"
+  ],
   "scripts": {
     "start": "electron-forge start",
     "package": "electron-forge package",
@@ -18,7 +23,6 @@
     "publish": "electron-forge publish",
     "lint": "echo \"No linting configured\""
   },
-  "keywords": [],
   "author": {
     "name": "Sahal",
     "email": "sahalbot@outlook.com"
