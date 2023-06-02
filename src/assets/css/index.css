@@ -26,6 +26,7 @@ body {
     content: '';
     opacity: .3;
     -webkit-transform: scaleX(.9);
+    transform: scaleX(.9);
     transition-property: opacity, -webkit-transform;
     transition-duration: .3s;
 }
@@ -33,6 +34,7 @@ body {
 .links:hover::before {
     opacity: 1;
     -webkit-transform: scaleX(1);
+    transform: scaleX(1);
 }
 
 * {
