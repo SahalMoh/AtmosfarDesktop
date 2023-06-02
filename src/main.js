@@ -20,6 +20,7 @@ function createBannerWindow() {
     height: 800,
     frame: false,
     icon: path.join(__dirname, 'assets/images/icon.png'),
+    alwaysOnTop: true,
     transparent: true,
     webPreferences: {
       nodeIntegration: true,
@@ -32,7 +33,7 @@ function createBannerWindow() {
     bannerWindow = null;
   });
 
-  setTimeout(createWindow, 3000);
+  setTimeout(createWindow, 7500);
 }
 
 const createWindow = () => {
@@ -45,7 +46,6 @@ const createWindow = () => {
     show: false,
     autoHideMenuBar: true,
     roundedCorners: true,
-    title: "Atmosfär - The Weather At Your Fingertips",
     icon: path.join(__dirname, 'assets/images/icon.png'),
     hasShadow: true,
     vibrancy: "ultra-dark",
