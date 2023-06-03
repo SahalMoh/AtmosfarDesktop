@@ -19,7 +19,7 @@ function createBannerWindow() {
     width: 1280,
     height: 800,
     frame: false,
-    icon: path.join(__dirname, 'assets/images/icon.png'),
+    icon: path.join(__dirname, 'assets/icons/icon.png'),
     alwaysOnTop: true,
     transparent: true,
     webPreferences: {
@@ -46,7 +46,7 @@ const createWindow = () => {
     show: false,
     autoHideMenuBar: true,
     roundedCorners: true,
-    icon: path.join(__dirname, 'assets/images/icon.png'),
+    icon: path.join(__dirname, 'assets/icons/icon.png'),
     hasShadow: true,
     vibrancy: "ultra-dark",
     visualEffectState: "active",

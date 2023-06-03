@@ -1,6 +1,6 @@
 module.exports = {
   packagerConfig: {
-    icon: 'src/assets/images/icon.png',
+    icon: 'src/assets/icons/icon.png',
     asar: true,
   },
   rebuildConfig: {},
@@ -10,7 +10,7 @@ module.exports = {
       config: {
         name: 'Atmosfar',
         iconUrl: 'https://atmosfar.netlify.app/assets/images/icon.ico',
-        setupIcon: 'src/assets/images/icon.ico',
+        setupIcon: 'src/assets/icons/icon.ico',
         config: {
           certificateFile: './cert.pfx',
           certificatePassword: process.env.CERT_PASSWORD,

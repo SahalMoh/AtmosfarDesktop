@@ -78,14 +78,14 @@ let weather = {
         document.querySelector(".usepaindex").innerHTML = usepaindex;
         document.querySelector(".ukdefraindex").innerHTML = ukdefraindex;
         if (code == 1000) {
-            document.body.style.backgroundImage = `url(./assets/images/day/clearday.webp)`;
+            document.body.style.backgroundImage = `url(./assets/day_bg/clearday.webp)`;
             document.body.style.backgroundPosition = "center"
             document.body.style.backgroundSize = "cover"
             document.body.style.backgroundRepeat = "no-repeat"
             document.querySelector(".submit").style.background = "#e5ba92";
             document.body.style.transition = "2s ease";
             if (is_day == "0") {
-                document.body.style.backgroundImage = `url(./assets/images/night/clearnight.webp)`;
+                document.body.style.backgroundImage = `url(./assets/night_bg/clearnight.webp)`;
                 document.body.style.backgroundPosition = "center"
                 document.body.style.backgroundSize = "cover"
                 document.body.style.backgroundRepeat = "no-repeat"
@@ -105,14 +105,14 @@ let weather = {
             code == 1279 ||
             code == 1282
         ) {
-            document.body.style.backgroundImage = `url(./assets/images/day/cloudyday.webp)`;
+            document.body.style.backgroundImage = `url(./assets/day_bg/cloudyday.webp)`;
             document.body.style.backgroundPosition = "center"
             document.body.style.backgroundSize = "cover"
             document.body.style.backgroundRepeat = "no-repeat"
             document.querySelector(".submit").style.background = "#fa6d1b";
             document.body.style.transition = "2s ease";
             if (is_day == "0") {
-                document.body.style.backgroundImage = `url(./assets/images/night/cloudynight.webp)`;
+                document.body.style.backgroundImage = `url(./assets/night_bg/cloudynight.webp)`;
                 document.body.style.backgroundPosition = "center"
                 document.body.style.backgroundSize = "cover"
                 document.body.style.backgroundRepeat = "no-repeat"
@@ -139,14 +139,14 @@ let weather = {
             code == 1249 ||
             code == 1252
         ) {
-            document.body.style.backgroundImage = `url(./assets/images/day/rainyday.webp)`;
+            document.body.style.backgroundImage = `url(./assets/day_bg/rainyday.webp)`;
             document.body.style.backgroundPosition = "center"
             document.body.style.backgroundSize = "cover"
             document.body.style.backgroundRepeat = "no-repeat"
             document.querySelector(".submit").style.background = "#647d75";
             document.body.style.transition = "2s ease";
             if (is_day == "0") {
-                document.body.style.backgroundImage = `url(./assets/images/night/rainynight.webp)`;
+                document.body.style.backgroundImage = `url(./assets/night_bg/rainynight.webp)`;
                 document.body.style.backgroundPosition = "center"
                 document.body.style.backgroundSize = "cover"
                 document.body.style.backgroundRepeat = "no-repeat"
@@ -154,14 +154,14 @@ let weather = {
                 document.body.style.transition = "2s ease";
             }
         } else {
-            document.body.style.backgroundImage = `url(./assets/images/day/snowyday.webp)`;
+            document.body.style.backgroundImage = `url(./assets/day_bg/snowyday.webp)`;
             document.body.style.backgroundPosition = "center"
             document.body.style.backgroundSize = "cover"
             document.body.style.backgroundRepeat = "no-repeat"
             document.querySelector(".submit").style.background = "#1b1b1b";
             document.body.style.transition = "2s ease";
             if (is_day == "0") {
-                document.body.style.backgroundImage = `url(./assets/images/night/snowynight.webp)`;
+                document.body.style.backgroundImage = `url(./assets/night_bg/snowynight.webp)`;
                 document.body.style.backgroundPosition = "center"
                 document.body.style.backgroundSize = "cover"
                 document.body.style.backgroundRepeat = "no-repeat"
