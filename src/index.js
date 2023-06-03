@@ -48,7 +48,7 @@ let weather = {
     displayWeather: function(data) {
         const { name, localtime, country } = data.location;
         const { icon, text, code } = data.current.condition;
-        const { temp_c, temp_f, humidity, wind_kph, wind_mph, wind_degree, wind_dir, cloud, is_day, feelslike_c, feelslike_f, vis_km, vis_miles, uv, pressure_mb, pressure_in, gust_mph, gust_kph, precip_in, precip_mm } = data.current;
+        const { temp_c, temp_f, humidity, wind_kph, wind_mph, wind_degree, wind_dir, cloud, is_day, feelslike_c, feelslike_f, vis_km, vis_miles, uv, pressure_mb, pressure_in, gust_mph, gust_kph, precip_in, precip_mm, last_updated } = data.current;
         const { co, o3, no2, so2, pm2_5, pm10 } = data.current.air_quality;
         const usepaindex = data.current.air_quality['us-epa-index'];
         const ukdefraindex = data.current.air_quality['gb-defra-index'];
@@ -77,6 +77,7 @@ let weather = {
         document.querySelector(".pm10").innerHTML = Math.trunc(pm10) + "&nbsp;" + "μg/m3";
         document.querySelector(".usepaindex").innerHTML = usepaindex;
         document.querySelector(".ukdefraindex").innerHTML = ukdefraindex;
+        document.querySelector(".lastupdated").innerHTML = "Weather Data For This Place Last Updated At:" + "&nbsp;" + last_updated;
         if (code == 1000) {
             document.body.style.backgroundImage = `url(./assets/day_bg/clearday.webp)`;
             document.body.style.backgroundPosition = "center"
