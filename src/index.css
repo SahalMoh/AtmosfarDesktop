@@ -100,7 +100,7 @@ h3{
 .weather {
     margin: 0 1em;
 }
- 
+
 .city-time h1 {
     margin: 0;
     margin-bottom: 0.2rem;
@@ -134,16 +134,23 @@ h3{
     scrollbar-width: thin;
 }
 
-.panel::-webkit-scrollbar,
-::-webkit-scrollbar-thumb {
-    width: 26px;
-    border-radius: 13px;
-    background-clip: padding-box;
-    border: 10px solid transparent;
+.panel::-webkit-scrollbar {
+    width: 5px;
+}
+
+.panel::-webkit-scrollbar-track {
+    background: rgba(110, 110, 110, 0.25);
+    border-radius: 100px;
+    backdrop-filter: blur(10px);
+    --webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+
 }
 
 .panel::-webkit-scrollbar-thumb {
-    box-shadow: inset 0 0 0 10px;
+    background-image: linear-gradient(180deg, #C9D6FF 0%, #E2E2E2 100%);
+    box-shadow: inset 2px 2px 5px 0 rgba(#fff, 0.5);
+    border-radius: 100px;
 }
 
 .panel form {
