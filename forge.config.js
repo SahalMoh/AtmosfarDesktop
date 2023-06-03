@@ -15,6 +15,7 @@ module.exports = {
           certificateFile: './cert.pfx',
           certificatePassword: process.env.CERT_PASSWORD,
         },
+        msi: true,
       },
     },
     {
