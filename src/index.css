@@ -138,6 +138,10 @@ h3{
     width: 5px;
 }
 
+.lastupdated {
+    font-size: small;
+}
+
 .panel::-webkit-scrollbar-track {
     background: rgba(110, 110, 110, 0.25);
     border-radius: 100px;

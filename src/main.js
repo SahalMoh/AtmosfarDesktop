@@ -33,7 +33,7 @@ function createBannerWindow() {
     bannerWindow = null;
   });
 
-  setTimeout(createWindow, 7500);
+  setTimeout(createWindow, 9595);
 }
 
 const createWindow = () => {

@@ -18,11 +18,12 @@
         .loading-container {
             width: 300px;
             height: 350px;
-            background-color: #ff8c00;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            position: relative;
+            overflow: hidden;
         }
 
         .loading-image {
@@ -32,7 +33,8 @@
             background-size: cover;
             border-radius: 50%;
             margin-bottom: 20px;
-            margin-right: 10px;
+            margin-right: 12px;
+            z-index: 10;
         }
 
         .loading-text {
@@ -72,6 +74,37 @@
                 opacity: 0;
             }
         }
+
+        .loading-container::before {
+            content: "";
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            right: -50%;
+            bottom: -50%;
+            background: linear-gradient(45deg, #efc7c6, #eda2a9, #00caf0, #0f9bc1);
+            background-size: 400% 400%;
+            animation: gradient-shift 15s linear infinite;
+        }
+
+        @keyframes gradient-shift {
+            0% {
+                background-position: 0% 0%;
+            }
+            25% {
+                background-position: 100% 0%;
+            }
+            50% {
+                background-position: 100% 100%;
+            }
+            75% {
+                background-position: 0% 100%;
+            }
+            100% {
+                background-position: 0% 0%;
+            }
+        }
+
     </style>
 </head>
 <body>

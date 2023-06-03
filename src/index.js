@@ -77,7 +77,7 @@ let weather = {
         document.querySelector(".pm10").innerHTML = Math.trunc(pm10) + "&nbsp;" + "μg/m3";
         document.querySelector(".usepaindex").innerHTML = usepaindex;
         document.querySelector(".ukdefraindex").innerHTML = ukdefraindex;
-        document.querySelector(".lastupdated").innerHTML = "Weather Data For This Place Last Updated At:" + "&nbsp;" + last_updated;
+        document.querySelector(".lastupdated").innerHTML = "Last Updated At:" + "&nbsp;" + last_updated;
         if (code == 1000) {
             document.body.style.backgroundImage = `url(./assets/day_bg/clearday.webp)`;
             document.body.style.backgroundPosition = "center"
