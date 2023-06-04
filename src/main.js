@@ -16,12 +16,15 @@ let bannerWindow;
 
 function createBannerWindow() {
   bannerWindow = new BrowserWindow({
-    width: 1280,
-    height: 800,
+    width: 300,
+    height: 350,
     frame: false,
     icon: path.join(__dirname, 'assets/icons/icon.png'),
-    alwaysOnTop: true,
     transparent: true,
+    hasShadow: true,
+    movable: true,
+    resizable: false,
+    sexy: true,
     webPreferences: {
       nodeIntegration: true,
     }
@@ -33,7 +36,7 @@ function createBannerWindow() {
     bannerWindow = null;
   });
 
-  setTimeout(createWindow, 9595);
+  setTimeout(createWindow, 12500);
 }
 
 const createWindow = () => {

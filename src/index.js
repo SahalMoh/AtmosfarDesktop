@@ -226,6 +226,4 @@ cityRandomSelect()
 
 window.addEventListener("offline",function(){
     alert('You Are Disconnected From The Internet, Please Connect To An Internet & Refresh (CTRL + R Or Right Click) For The App To Work')
-}),
-
-console.log("Go Away! You're Not Supposed To Be Here! 😡")
+})

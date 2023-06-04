@@ -15,7 +15,8 @@ module.exports = {
           certificateFile: './cert.pfx',
           certificatePassword: process.env.CERT_PASSWORD,
         },
-        msi: true,
+        noMSI: false,
+        loadingGif: 'src/assets/cat.gif',
       },
     },
     {
