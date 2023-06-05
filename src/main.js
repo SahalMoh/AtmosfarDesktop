@@ -1,4 +1,4 @@
-const { app, BrowserWindow, ipcMain, shell } = require('electron');
+const { app, BrowserWindow, ipcMain, shell, Menu, Tray } = require('electron');
 const path = require('path');
 const fs = require('fs');
 require('electron-reload')(__dirname);
@@ -7,12 +7,13 @@ require('update-electron-app')({
   logger: require('electron-log'),
   notifyUser: true
 })
-// Handle creating/removing shortcuts on Windows when installing/uninstalling.
 if (require('electron-squirrel-startup')) {
   app.quit();
 }
 
 let bannerWindow;
+let mainWindow;
+let tray;
 
 function createBannerWindow() {
   bannerWindow = new BrowserWindow({
@@ -24,24 +25,24 @@ function createBannerWindow() {
     hasShadow: true,
     movable: true,
     resizable: false,
-    sexy: true,
+    devtools: false,
     webPreferences: {
       nodeIntegration: true,
+      devtools: false,
     }
   });
 
   bannerWindow.loadFile(path.join(__dirname, 'splash.html'));
 
-  bannerWindow.once('close', () => {
+  bannerWindow.once('closed', () => {
     bannerWindow = null;
   });
 
-  setTimeout(createWindow, 12500);
+  setTimeout(createMainWindow, 12500);
 }
 
-const createWindow = () => {
-  // Create the browser window.
-  const mainWindow = new BrowserWindow({
+function createMainWindow() {
+  mainWindow = new BrowserWindow({
     width: 1280,
     height: 720,
     minHeight: 480,
@@ -59,32 +60,28 @@ const createWindow = () => {
       nodeIntegration:true,
       contextIsolation:false,
       enableRemoteModule:true,
-      devtools: !app.isPackaged,
+      devtools: false,
       webSecurity: true,
     },
   });
 
-  // and load the index.html of the app.
   mainWindow.loadFile(path.join(__dirname, 'index.html'));
 
-  const packagePath = path.join(app.getAppPath(), './package.json');
+  const packagePath = path.join(app.getAppPath(), 'package.json');
   const packageData = JSON.parse(fs.readFileSync(packagePath));
   const appVersion = packageData.version;
 
   mainWindow.webContents.on('did-finish-load', () => {
     mainWindow.webContents.send('app-version', appVersion);
   });
-  // Open the DevTools.
-  //mainWindow.webContents.openDevTools();
+
   ipcMain.on('get-app-version', (event) => {
     const packagePath = path.join(app.getAppPath(), 'package.json');
     const packageData = JSON.parse(fs.readFileSync(packagePath));
     const appVersion = packageData.version;
-  
-    // Send the version number to the renderer process
     event.sender.send('app-version', appVersion);
   });
-  
+
   mainWindow.once('ready-to-show', () => {
     mainWindow.maximize();
     mainWindow.show();
@@ -92,16 +89,69 @@ const createWindow = () => {
       bannerWindow.close();
     }
   });
-};
 
-// This method will be called when Electron has finished
-// initialization and is ready to create browser windows.
-// Some APIs can only be used after this event occurs.
+  mainWindow.on('close', (event) => {
+    event.preventDefault();
+    mainWindow.hide();
+  });
+
+  mainWindow.on('closed', () => {
+    mainWindow = null;
+  });
+}
+
+app.whenReady().then(() => {
+  tray = new Tray(path.join(__dirname, 'assets/icons/icon.ico'));
+  tray.setToolTip('Atmosfär');
+
+  const contextMenu = Menu.buildFromTemplate([
+    { label: 'Atmosfär', icon: path.join(__dirname, 'assets/icons/icon25.png'), enabled: false },
+    { type: 'separator' },
+    { label: 'Open GitHub Repository', click: openGitHubRepo },
+    { label: 'Open Website', click: openWebsite },
+    { type: 'separator' },
+    { label: 'Open', click: openMainWindow },
+    { label: 'Quit', click: quitApp }
+  ]);
+
+  tray.setContextMenu(contextMenu);
+});
+
+function openGitHubRepo() {
+  shell.openExternal('https://github.com/SahalMoh/AtmosfarDesktop/');
+}
+
+function openWebsite() {
+  shell.openExternal('https://atmosfar.netlify.app/');
+}
+
+function quitApp() {
+  if (mainWindow) {
+    mainWindow.removeAllListeners('close');
+    mainWindow.close();
+    mainWindow = null;
+  }
+  app.quit();
+}
+
+function openMainWindow() {
+  if (bannerWindow) {
+    return;
+  }
+  
+  if (mainWindow) {
+    mainWindow.show();
+  } else {
+    createMainWindow();
+  }
+}
+
 app.on('ready', createBannerWindow);
 
-// Quit when all windows are closed, except on macOS. There, it's common
-// for applications and their menu bar to stay active until the user quits
-// explicitly with Cmd + Q.
+app.on('before-quit', () => {
+  app.isQuitting = true;
+});
+
 app.on('window-all-closed', () => {
   if (process.platform !== 'darwin') {
     app.quit();
@@ -109,12 +159,7 @@ app.on('window-all-closed', () => {
 });
 
 app.on('activate', () => {
-  // On OS X it's common to re-create a window in the app when the
-  // dock icon is clicked and there are no other windows open.
   if (BrowserWindow.getAllWindows().length === 0) {
-    createWindow();
+    createMainWindow();
   }
 });
-
-// In this file you can include the rest of your app's specific main process
-// code. You can also put them in separate files and import them here.
