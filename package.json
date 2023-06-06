@@ -29,6 +29,8 @@
   },
   "license": "MIT",
   "dependencies": {
+    "@electron/asar": "^3.2.4",
+    "@npmcli/fs": "^3.1.0",
     "electron-log": "^4.4.8",
     "electron-reload": "^2.0.0-alpha.1",
     "electron-squirrel-startup": "^1.0.0",
