@@ -1,7 +1,7 @@
 {
   "name": "atmosfar_desktop",
   "productName": "Atmosfär",
-  "version": "1.0.28",
+  "version": "1.0.29",
   "description": "The Weather At Your Fingertips.",
   "main": "src/main.js",
   "repository": {
