@@ -90,11 +90,6 @@ function createMainWindow() {
     }
   });
 
-  mainWindow.on('close', (event) => {
-    event.preventDefault();
-    mainWindow.hide();
-  });
-
   mainWindow.on('closed', () => {
     mainWindow = null;
   });
@@ -109,9 +104,6 @@ app.whenReady().then(() => {
     { type: 'separator' },
     { label: 'Open GitHub Repository', click: openGitHubRepo },
     { label: 'Open Website', click: openWebsite },
-    { type: 'separator' },
-    { label: 'Open', click: openMainWindow },
-    { label: 'Quit', click: quitApp }
   ]);
 
   tray.setContextMenu(contextMenu);
@@ -123,15 +115,6 @@ function openGitHubRepo() {
 
 function openWebsite() {
   shell.openExternal('https://atmosfar.netlify.app/');
-}
-
-function quitApp() {
-  if (mainWindow) {
-    mainWindow.removeAllListeners('close');
-    mainWindow.close();
-    mainWindow = null;
-  }
-  app.quit();
 }
 
 function openMainWindow() {
@@ -148,10 +131,6 @@ function openMainWindow() {
 
 app.on('ready', () => {
   createBannerWindow();
-});
-
-app.on('before-quit', () => {
-  app.isQuitting = true;
 });
 
 app.on('window-all-closed', () => {
