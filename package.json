@@ -1,21 +1,10 @@
 {
   "name": "atmosfar_desktop",
-  "productName": "Atmosfär",
-  "version": "1.0.29",
+  "productName": "Atmosfar",
+  "version": "2.0.0",
   "description": "The Weather At Your Fingertips.",
   "main": "src/main.js",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/SahalMoh/AtmosfarDesktop.git"
-  },
-  "build": {
-    "asar": true
-  },
-  "keywords": [
-    "Atmosfär",
-    "Atmosfär Weather App",
-    "Atmosfär - The Weather At Your Fingertips"
-  ],
+  "repository": "https://github.com/SahalMoh/AtmosfarDesktop.git",
   "scripts": {
     "start": "electron-forge start",
     "package": "electron-forge package",
@@ -23,14 +12,17 @@
     "publish": "electron-forge publish",
     "lint": "echo \"No linting configured\""
   },
+  "keywords": [
+    "Atmosfär",
+    "Atmosfär Weather App",
+    "Atmosfär - The Weather At Your Fingertips"
+  ],
   "author": {
     "name": "Sahal",
     "email": "sahalbot@outlook.com"
   },
   "license": "MIT",
   "dependencies": {
-    "@electron/asar": "^3.2.4",
-    "@npmcli/fs": "^3.1.0",
     "electron-log": "^4.4.8",
     "electron-reload": "^2.0.0-alpha.1",
     "electron-squirrel-startup": "^1.0.0",
@@ -43,6 +35,6 @@
     "@electron-forge/maker-squirrel": "^6.1.1",
     "@electron-forge/maker-zip": "^6.1.1",
     "@electron-forge/publisher-github": "^6.1.1",
-    "electron": "24.4.0"
+    "electron": "25.1.0"
   }
 }
