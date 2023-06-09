@@ -1,7 +1,5 @@
-require('dotenv').config();
-
 let weather = {
-    "apiKey": process.env.APIKEY,
+    "apiKey": "b5a52f8a62be487baf1190007230906",
     fetchWeather: function(city) {
         fetch(
             "https://api.weatherapi.com/v1/current.json?key=" 

@@ -1,7 +1,7 @@
 {
   "name": "atmosfar_desktop",
   "productName": "Atmosfar",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "The Weather At Your Fingertips.",
   "main": "src/main.js",
   "repository": "https://github.com/SahalMoh/AtmosfarDesktop.git",
@@ -23,7 +23,6 @@
   },
   "license": "MIT",
   "dependencies": {
-    "dotenv": "^16.1.4",
     "electron-log": "^4.4.8",
     "electron-reload": "^2.0.0-alpha.1",
     "electron-squirrel-startup": "^1.0.0",
