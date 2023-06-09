@@ -105,7 +105,7 @@ app.whenReady().then(() => {
   tray.setToolTip('Atmosfär');
 
   const contextMenu = Menu.buildFromTemplate([
-    { label: 'Atmosfär', icon: path.join(__dirname, 'assets/icons/icon25.png'), enabled: false },
+    { label: 'Atmosfär', enabled: false },
     { type: 'separator' },
     { label: 'Open GitHub Repository', click: openGitHubRepo },
     { label: 'Open Website', click: openWebsite },
@@ -146,7 +146,9 @@ function openMainWindow() {
   }
 }
 
-app.on('ready', createBannerWindow);
+app.on('ready', () => {
+  createBannerWindow();
+});
 
 app.on('before-quit', () => {
   app.isQuitting = true;

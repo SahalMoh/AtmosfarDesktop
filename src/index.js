@@ -41,7 +41,9 @@ let weather = {
         .catch(error => {
             console.log(error);
             if (!navigator.onLine) {
-                alert('You Are Disconnected From The Internet, Please Connect To The Internet & Refresh (CTRL + R Or Right Click) For The App To Work');
+                alert(
+                    'No Internet Connection, Please check your internet connection and try again.',
+                );
             }
         });
     },
@@ -225,5 +227,7 @@ cityRandomSelect()
 
 
 window.addEventListener("offline",function(){
-    alert('You Are Disconnected From The Internet, Please Connect To An Internet & Refresh (CTRL + R Or Right Click) For The App To Work')
+    alert(
+        'No Internet Connection. Please check your internet connection and try again.',
+    )
 })
