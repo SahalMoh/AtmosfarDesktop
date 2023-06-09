@@ -1,6 +1,6 @@
 module.exports = {
   packagerConfig: {
-    icon: 'src/assets/icons/icon.png',
+    icon: 'src/assets/icons/icon.ico',
     asar: true,
   },
   rebuildConfig: {},
@@ -15,11 +15,11 @@ module.exports = {
           certificateFile: './cert.pfx',
           certificatePassword: process.env.CERT_PASSWORD,
         },
-        loadingGif: 'src/assets/cat.gif',
       },
     },
     {
       name: '@electron-forge/maker-zip',
+      platforms: ['darwin'],
     },
     {
       name: '@electron-forge/maker-deb',
