@@ -10,8 +10,38 @@ let weather = {
         )
         .then((response) => {
             if (!response.ok) {
-                alert("City Not Found. You May Have Typed In An Invalid Name Or Left The Search Bar Blank.");
-                throw new Error("City Not Found. You May Have Typed In An Invalid Name Or Left The Search Bar Blank.");
+                document.querySelector(".name").innerHTML = "City Not Found";
+                document.querySelector(".country").innerHTML = "City Not Found";
+                document.querySelector(".icon").src = ("./assets/icons/questionmark.svg");
+                document.querySelector(".datetime").innerHTML = "City Not Found";
+                document.querySelector(".condition").innerHTML = "City Not Found";
+                document.querySelector(".temp").innerHTML = "City Not Found";
+                document.querySelector(".cloud").innerHTML = "City Not Found";
+                document.querySelector(".humidity").innerHTML = "City Not Found";
+                document.querySelector(".precip").innerHTML = "City Not Found";
+                document.querySelector(".wind").innerHTML = "City Not Found";
+                document.querySelector(".gust").innerHTML = "City Not Found";
+                document.querySelector(".winddeg").innerHTML = "City Not Found";
+                document.querySelector(".winddir").innerHTML = "City Not Found";
+                document.querySelector(".feelslike").innerHTML = "City Not Found";
+                document.querySelector(".visib").innerHTML = "City Not Found";
+                document.querySelector(".uvindex").innerHTML = "City Not Found";
+                document.querySelector(".pressure").innerHTML = "City Not Found";
+                document.querySelector(".carbmonx").innerHTML = "City Not Found";
+                document.querySelector(".ozone").innerHTML = "City Not Found";
+                document.querySelector(".nitrodiox").innerHTML = "City Not Found";
+                document.querySelector(".sulphdiox").innerHTML = "City Not Found";
+                document.querySelector(".pm25").innerHTML = "City Not Found";
+                document.querySelector(".pm10").innerHTML = "City Not Found";
+                document.querySelector(".usepaindex").innerHTML = "City Not Found";
+                document.querySelector(".ukdefraindex").innerHTML = "City Not Found";
+                document.querySelector(".lastupdated").innerHTML = "Last Updated At:" + "&nbsp;" + "City Not Found";
+                document.querySelector(".sunrise").innerHTML = "City Not Found";
+                document.querySelector(".sunset").innerHTML = "City Not Found";
+                document.querySelector(".moonrise").innerHTML = "City Not Found";
+                document.querySelector(".moonset").innerHTML = "City Not Found";
+                document.querySelector(".moonphase").innerHTML = "City Not Found";
+                document.querySelector(".moonillum").innerHTML = "City Not Found";        
             }
             return response.json();
         })
